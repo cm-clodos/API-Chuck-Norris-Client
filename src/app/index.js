@@ -1,8 +1,6 @@
 
 
 (async function getCategories() {
-
-
     let result = await fetch("https://api.chucknorris.io/jokes/categories")
     if (result.ok) {
         let categories = await result.json()
@@ -11,8 +9,6 @@
         for (const category of categories) {
            renderItem(category)
         }
-
-       displayJokes.style.display = ""
 
     } else {
         console.log("Response not successfully!")
